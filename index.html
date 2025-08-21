@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog Post _ updated</title>
+    <title>My Blog Post</title>
 </head>
 <body>
 
@@ -47,14 +47,63 @@
                 <!-- Text input for name -->
                  <label for="name">Your Name: </label>
                  <br>
-                 <input type="text" name="name" id="name" placeholder="E.g. Jamie Smith">
+                 <input type="text" name="name" id="name" placeholder="E.g. Jamie Smith" required minlength="3" maxlength="50">
                     <br><br>
+                
+                <label for="email">Your Email:</label>
+                <br>
+                <input type="email" name="email" id="email" required>
+                <br><br>
+
+                <!-- Phone number format - 123-456-7896 -->
+                 <!-- Regular expressions -->
+                 <label for="phone">Your Phone Number</label>
+                 <br>
+                 <input type="tel" name="phone" id="phone" pattern="\d{3}-\d{3}-\d{4}"
+                 placeholder="123-456-7867"
+                 >
+                 <!-- Website info -->
+                <label for="website">Your Website:(optional)</label>
+                <br>
+                <input type="url" name="url" id="url" placeholder="http://www.example.com">
+
                 
                 <!-- Text input for feedback -->
                  <label for="feedback">Your Thoughts</label>
                  <br>
                  <textarea name="feedback" id="feedback" cols="30" rows="5"></textarea>
                  <br><br>
+
+                <!-- Rate their experience -->
+                 <p>How would you rate this blog?</p>
+                 <input type="radio" name="rating" id="good" value="good" required checked>
+                 <label for="good">Good</label>
+                 <br>
+
+                 <input type="radio" name="rating" id="neutral" value="neutral" required>
+                 <label for="neutral">Neutral</label>
+                 <br>
+
+                 <input type="radio" name="rating" id="bad" value="bad" required>
+                 <label for="bad">Bad</label>
+                 <br><br>
+
+                 <!-- Newsletter sign up -->
+                  <input type="checkbox" name="newsletter" id="newsletter" value="yes" checked>
+                  <label for="newsletter">Sign up for our newsletter</label>
+                 <br><br>
+                  <!-- Newsletter topic -->
+
+                  <label for="topic">Choose a topic</label>
+                  <br>
+                  <select name="topic" id="topic">
+                        <option value="">--Please choose an option--</option>
+                        <option value="general">General</option>
+                        <option value="suggestions">Suggestions</option>
+                        <option value="questions">Questions</option>
+                  </select>
+                  <br><br>
+
                 <button type="submit">Submit Feedback</button>
 
             </form>
